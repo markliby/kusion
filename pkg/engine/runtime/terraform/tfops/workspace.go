@@ -139,7 +139,7 @@ func (w *WorkSpace) InitWorkSpace(ctx context.Context) error {
 	cmd.Dir = w.dir
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		return TFError(out)
+		return errors.New(string(out))
 	}
 	return nil
 }

@@ -7,7 +7,7 @@ on:
     - main
   push:
     branches:
-    - main
+    - fix_kusion_tf_ut
 jobs:
   Test:
     name: Unit tests with coverage

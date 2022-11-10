@@ -56,7 +56,7 @@ var (
 		},
 	}
 
-	fs = afero.Afero{Fs: afero.NewMemMapFs()}
+	fs = afero.Afero{Fs: afero.NewOsFs()}
 )
 
 func TestWriteHCL(t *testing.T) {
