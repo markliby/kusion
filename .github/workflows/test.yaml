@@ -7,7 +7,7 @@ on:
     - main
   push:
     branches:
-    - fix_kusion_tf_ut
+    - test_ut
 jobs:
   Test:
     name: Unit tests with coverage
@@ -34,6 +34,7 @@ jobs:
         env:
           GO111MODULE: on
         run: make cover
+      - run: which terraform
       - name: Send coverage
         uses: shogo82148/actions-goveralls@v1
         with:
